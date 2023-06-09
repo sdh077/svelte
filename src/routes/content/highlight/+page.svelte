@@ -80,4 +80,4 @@
 `;
 </script>
 
-<Code language="javascript" {code} header="" />
+<Code language="javascript" {code} />

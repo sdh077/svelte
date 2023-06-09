@@ -3,7 +3,6 @@
 
 	export let language;
 	export let code;
-	export let header;
 
 	onMount(() => {
 		let script = document.createElement('script');
@@ -70,6 +69,7 @@
 </svelte:head>
 
 <div>
-	<h2>{header}</h2>
-	<pre><code class="language-{language}">{code.replace('scrip', 'script')}</code></pre>
+	<pre><code class="language-{language}"
+			>{code.replace('<scrip', '<script').replace('</scrip', '</script')}</code
+		></pre>
 </div>

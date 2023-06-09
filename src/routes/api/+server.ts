@@ -6,8 +6,8 @@ export const GET = async () => {
 };
 
 const fetchMarkdownPosts = async () => {
-    const contentFiles = import.meta.glob('/src/routes/content/*/*.svelte');
-    const startFiles = import.meta.glob('/src/routes/start/*/*.svelte');
+    const contentFiles = import.meta.glob('/src/routes/content/*/+page.svelte');
+    const startFiles = import.meta.glob('/src/routes/start/*/+page.svelte');
 
     const iterContents = Object.entries(contentFiles);
     const iterStarts = Object.entries(startFiles);
