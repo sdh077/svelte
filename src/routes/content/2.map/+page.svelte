@@ -1,6 +1,7 @@
 <script>
 	import { Button } from 'flowbite-svelte';
 	import Code from '$lib/components/code/code.svelte';
+	import Npm from '$lib/components/page/npm.svelte';
 	import { onMount } from 'svelte';
 	onMount(async () => {
 		mapChange(37.3595704, 127.105399);
@@ -38,7 +39,7 @@
 
 <h1>Naver Map 연동</h1>
 <div>
-	<h5>0. 타입스크립트일 경우 npm i -D @types/navermaps</h5>
+	<h5>0. 타입스크립트일 경우 <Npm str={'npm i -D @types/navermaps'} /></h5>
 </div>
 <div>
 	<h5>1. 네이버 클라우드 접속하여 계정 생성</h5>
