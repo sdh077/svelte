@@ -9,7 +9,10 @@
 	let messages = [];
 	$: {
 		if (messages) {
-			if (chat) chat.scrollTo(0, chat.scrollHeight);
+			if (chat)
+				setTimeout(() => {
+					chat.scrollTop = chat.scrollHeight + 100;
+				}, 10);
 		}
 	}
 	onMount(async () => {
@@ -38,7 +41,7 @@
 
 		<div class="h-full w-full p-4 overflow-y-auto snap-x" bind:this={chat}>
 			{#each messages as message}
-				<div class="snap-end bg-zinc-300 rounded-xl rounded-tl-none px-4 py-3 my-4 w-fit">
+				<div class="bg-zinc-300 rounded-xl rounded-tl-none px-4 py-3 my-4 w-fit">
 					<span class="flex items-center space-between gap-4">
 						<b>{message.from}</b>
 						<i>{message.time}</i>
