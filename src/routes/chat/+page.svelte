@@ -1,7 +1,8 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 	import { io } from 'socket.io-client';
-	const socket = io.connect('http://43.200.130.92:3000/', {});
+	const socket = io('http://15.165.12.69:3000/', {});
+	// const socket = io('http://localhost:3000', {});
 	let textfield = '';
 	let username = '';
 
