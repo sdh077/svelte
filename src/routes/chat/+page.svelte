@@ -7,17 +7,13 @@
 	let username = '';
 	let chat;
 	let messages = [];
-	$: {
-		if (messages) {
-			if (chat)
-				setTimeout(() => {
-					chat.scrollTop = chat.scrollHeight + 100;
-				}, 10);
-		}
-	}
+
 	onMount(async () => {
 		socket.on('chat message', (message) => {
 			messages = [...messages, message];
+			setTimeout(() => {
+				chat.scrollTop = chat.scrollHeight + 100;
+			}, 10);
 		});
 	});
 
