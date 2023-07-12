@@ -2,7 +2,7 @@
 	"name": "mylib",
 	"version": "0.0.1",
 	"scripts": {
-		"dev": "vite dev",
+		"dev": "vite dev --host 0.0.0.0",
 		"build": "vite build && npm run package",
 		"preview": "vite preview",
 		"package": "svelte-kit sync && svelte-package && publint",
@@ -62,6 +62,8 @@
 		"flowbite": "^1.6.5",
 		"flowbite-svelte": "^0.37.4",
 		"node-html-parser": "^6.1.5",
-		"pnpm": "^8.6.1"
+		"pnpm": "^8.6.1",
+		"socket.io": "^4.7.1",
+		"socket.io-client": "^4.7.1"
 	}
 }
