@@ -1,10 +1,11 @@
 <script lang="ts">
 	import { onMount, beforeUpdate, afterUpdate } from 'svelte';
+	import { PUBLIC_SOCKET_URL } from '$env/static/public';
 	import { page } from '$app/stores';
 
 	import { io } from 'socket.io-client';
-	// const socket = io('ws://15.165.12.69:3000/', {});
-	const socket = io(`ws://localhost:3000/room?id=${$page.params.id}`, {});
+	// const socket = io(PUBLIC_SOCKET_URL, {});
+	const socket = io(`${PUBLIC_SOCKET_URL}/room?id=${$page.params.id}`, {});
 	let user = '이름입력';
 	let textfield = '';
 	let chat;
